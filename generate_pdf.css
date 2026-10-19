@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif, system-ui;
+}
+
+.layout-index {
+    display: flex;
+    height: 100vh;
+    background-color: #f8fafc;
+}
+
+.sidebar-index {
+    width: 260px;
+    background-color: #0f172a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1.9rem 0;
+}
+
+.brand-index {
+    display: flex;
+    padding: 0 1.5rem 2rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-bottom: 1px solid #334155;
+}
+
+.menu-index {
+    flex: 1;
+    padding: 0 0.75rem;
+}
+
+.nav-item-index {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #94a3b8;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 0.25rem;
+    transition: all 0.2s;
+}
+
+.nav-item-index:hover {
+    background: #1e293b;
+    color: white;
+}
+
+.nav-item-index.active {
+    background: #3b82f6;
+    color: white;
+}
+
+.nav-divider-index {
+    height: 1px;
+    background: #1e293b;
+    margin: 1rem 1rem;
+}
+
+.main-content {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.top-bar {
+    background: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.search-wrapper {
+    background: #f1f5f9;
+    padding: 8px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
+}
+
+.search-wrapper input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+}
+
+.content-container {
+    padding: 2.5rem;
+}
+
+.page-header h1 {
+    color: #0f172a;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    color: #64748b;
+    margin-bottom: 2rem;
+}
+
+.report-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.report-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.report-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.report-icon {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    font-size: 1.5rem;
+}
+
+.stock {
+    background: #eff6ff;
+    color: #3b82f6;
+}
+
+.alerts {
+    background: #fff7ed;
+    color: #f97316;
+}
+
+.inbound {
+    background: #f0fdf4;
+    color: #16a34a;
+}
+
+.outbound {
+    background: #faf5ff;
+    color: #a855f7;
+}
+
+.report-card h3 {
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+}
+
+.report-card p {
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    height: 45px;
+}
+
+.btn-pdf {
+    width: 100%;
+    background-color: #0f172a;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.2s;
+}
+
+.btn-pdf:hover {
+    background-color: #3b82f6;
+}
+
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container {
+    background: white;
+    width: 85%;
+    height: 90%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.modal-header {
+    padding: 15px 25px;
+    background: #0f172a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-body {
+    flex: 1;
+    padding: 10px;
+    background: #f1f5f9;
+}
+
+#previewFrame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: white;
+}
+
+.btn-modal-print {
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-modal-close {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* --- Theme Definitions --- */
+
+/* Default / Dark Theme (Midnight) */
+body.theme-dark .sidebar-index { background-color: #0f172a; color: white; }
+body.theme-dark .top-bar { background: white; border-bottom: 1px solid #e2e8f0; }
+
+/* Light Theme (Snow White) */
+body.theme-light .sidebar-index { background-color: #ffffff; color: #0f172a; border-right: 1px solid #e2e8f0; }
+body.theme-light .top-bar { background: #f8fafc; border-bottom: 1px solid #e2e8f0; }
+body.theme-light .nav-item-index { color: #475569; }
+body.theme-light .brand-index { color: #0f172a; border-bottom: 1px solid #e2e8f0; }
+
+/* Ocean Theme (Deep Blue) */
+body.theme-ocean .sidebar-index { background-color: #1e3a8a; color: white; }
+body.theme-ocean .top-bar { background: #eff6ff; border-bottom: 1px solid #bfdbfe; }
+body.theme-ocean .nav-item-index { color: #93c5fd; }
