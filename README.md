@@ -1,0 +1,2 @@
+# stock-control
+IGNOU project
