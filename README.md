@@ -1,2 +1,2 @@
 # stock-control
-IGNOU project
+IGNOU project using PHP, SQL, HTML, CSS, JS
